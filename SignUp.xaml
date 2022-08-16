@@ -1,0 +1,42 @@
+﻿<Window x:Class="ST10083941_S2_ICE1.SignUp"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        Background="{DynamicResource MaterialDesignPaper}"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ST10083941_S2_ICE1"
+        WindowStartupLocation="CenterScreen"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="600">
+    <Grid>
+        <StackPanel>
+            <materialDesign:ColorZone Background="{DynamicResource PrimaryHueDarkBrush}" Height="75">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Foreground="White" Kind="CalendarPlus" Width="100" Height="60" VerticalAlignment="Center" />
+                    <TextBlock Foreground="{StaticResource IdealForegroundColorBrush}" FontSize="55" Padding="100 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}">SIMPLIFY</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" FontSize="32" TextDecorations="Underline" FontWeight="Bold" Padding="0 10 0 50">ST10083941</TextBlock>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBox FontSize="24" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 50"></TextBox>
+
+                    <PasswordBox FontSize="24" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 25" ></PasswordBox>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 25" >
+                        <TextBlock FontSize="16" VerticalAlignment="Center">Already a member?</TextBlock>
+                        <Button FontSize="16" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignIconForegroundButton}" >Login</Button>
+                    </StackPanel>
+
+                    <Button FontSize="32" FontWeight="Bold" Height="50" Width="250" Margin="0 0 0 50" >SUBMIT</Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
