@@ -20,21 +20,42 @@
                 </StackPanel>
             </materialDesign:ColorZone>
 
-            <StackPanel>
-                <TextBlock HorizontalAlignment="Center" FontSize="32" TextDecorations="Underline" FontWeight="Bold" Padding="0 10 0 50">ST10083941</TextBlock>
+            <StackPanel Name="pnlLogin" Visibility="Visible">
+                <TextBlock HorizontalAlignment="Center" FontSize="32" TextDecorations="Underline" FontWeight="Bold" Padding="0 10 0 50">LOGIN PAGE</TextBlock>
 
                 <StackPanel HorizontalAlignment="Center">
-                    <TextBox FontSize="24" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 50"></TextBox>
+                    <TextBox FontSize="24" materialDesign:HintAssist.Hint="Username" Name="txbLoginUsername" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 50"></TextBox>
 
-                    <PasswordBox FontSize="24" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 25" ></PasswordBox>
+                    <PasswordBox FontSize="24" materialDesign:HintAssist.Hint="Password" Name="txbLoginPassword" materialDesign:HintAssist.IsFloating="True" Width="500" Margin="0 0 0 25" ></PasswordBox>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 25" >
-                        <TextBlock FontSize="16" VerticalAlignment="Center">Already a member?</TextBlock>
-                        <Button FontSize="16" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignIconForegroundButton}" >Login</Button>
+                        <TextBlock FontSize="12" VerticalAlignment="Center">Not a member?</TextBlock>
+                        <Button FontSize="12" x:Name="btnShowSignUp" Click="btnShowSignUp_Click" VerticalAlignment="Center"  Style="{DynamicResource MaterialDesignIconForegroundButton}">Sign Up!</Button>
                     </StackPanel>
 
-                    <Button FontSize="32" FontWeight="Bold" Height="50" Width="250" Margin="0 0 0 50" >SUBMIT</Button>
+                    <Button FontSize="32" x:Name="btnLogin" Click="btnLogin_Click" Background="{DynamicResource PrimaryHueDarkBrush}" FontWeight="Bold" Height="50" Width="250" Margin="0 0 0 25" >LOGIN</Button>
                 </StackPanel>
+            </StackPanel>
+
+            <StackPanel x:Name="pnlSignUp" Visibility="Collapsed">
+                <TextBlock HorizontalAlignment="Center" FontSize="32" TextDecorations="Underline" FontWeight="Bold" Padding="0 10 0 10">SIGN UP PAGE</TextBlock>
+
+                <TextBox FontSize="20" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.IsFloating="True" Name="txbUsername" Width="500" Margin="0 0 0 25"></TextBox>
+
+                <PasswordBox FontSize="20" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True" Name="txbPassword" Width="500" Margin="0 0 0 25" ></PasswordBox>
+
+                <TextBox FontSize="20" materialDesign:HintAssist.Hint="Full Name" materialDesign:HintAssist.IsFloating="True" Name="txbFullName" Width="500" Margin="0 0 0 25"></TextBox>
+
+                <DatePicker FontSize="20" Width="500" materialDesign:HintAssist.HelperText="Date of Birth" Name="dateDOB" materialDesign:HintAssist.HelperTextFontSize="20" Margin="0 0 0 25"></DatePicker>
+
+                <ComboBox Width="500" FontSize="20" Name="cmbGender" Margin="0 0 0 25">
+                    <ComboBoxItem>Male</ComboBoxItem>
+                    <ComboBoxItem>Female</ComboBoxItem>
+                    <ComboBoxItem>Other</ComboBoxItem>
+                </ComboBox>
+
+                <Button FontSize="32" x:Name="btnSignUp" Click="btnSignUp_Click" Background="{DynamicResource PrimaryHueDarkBrush}" FontWeight="Bold" Height="50" Width="250" Margin="0 0 0 25" >SIGN UP</Button>
+
             </StackPanel>
         </StackPanel>
 
