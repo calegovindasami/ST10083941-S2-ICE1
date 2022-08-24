@@ -63,5 +63,33 @@ namespace ST10083941_S2_ICE1
             txbAge.Text = currentUser.Age.ToString();
 
         }
+
+        private void btnAddEvent_Click(object sender, RoutedEventArgs e)
+        {
+            AddEvent addEvent = new AddEvent(UserID);
+            this.Hide();
+            addEvent.ShowDialog();
+            addEvent.Close();
+            this.Show();
+        }
+
+        private void btnMyEvents_Click(object sender, RoutedEventArgs e)
+        {
+            MyEvents myEvents = new MyEvents(UserID);
+            this.Hide();
+            myEvents.ShowDialog();
+            myEvents.Close();
+            this.Show();
+
+        }
+
+        private void btnAllEvents_Click(object sender, RoutedEventArgs e)
+        {
+            AllEvents allEvents = new AllEvents();
+            this.Hide();
+            allEvents.ShowDialog();
+            allEvents.Close();
+            this.Show();
+        }
     }
 }
